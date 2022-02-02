@@ -4,6 +4,9 @@ test-bytes: test-bytes.o show-bytes.c
 test-bits: test-bits.o bit-operator.c
 	gcc -o test-bits.test test-bits.o
 
+ex-test: ex-test.c
+	gcc -o ex-test.test ex-test.c && ./ex-test.test
+
 test-bytes.o: test-bytes.c
 	gcc -c test-bytes.c
 
