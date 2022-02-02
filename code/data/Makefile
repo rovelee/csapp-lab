@@ -1,17 +1,11 @@
-test-bytes: test-bytes.o show-bytes.c
-	gcc -o show-bytes.test test-bytes.o
+test-show: test-show.c show.c
+	gcc -o show.test test-show.c
 
-test-bits: test-bits.o bit-operator.c
-	gcc -o test-bits.test test-bits.o
+test-bits: test-bits.c bit-operator.c
+	gcc -o test-bits.test test-bits.c
 
 ex-test: ex-test.c
 	gcc -o ex-test.test ex-test.c && ./ex-test.test
-
-test-bytes.o: test-bytes.c
-	gcc -c test-bytes.c
-
-test-bits.o: test-bits.c
-	gcc -c test-bits.c
 
 clean:
 	rm -f *.o *.test
