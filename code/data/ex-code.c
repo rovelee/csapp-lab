@@ -42,3 +42,26 @@ void ex214(){
     printf("%d\t%d\t%d\t%d\t\n", x2, y1, fn0_ex214(x2, y1), fn1_ex214(x2, y1));
     printf("%d\t%d\t%d\t%d\t\n", x2, y2, fn0_ex214(x2, y2), fn1_ex214(x2, y2));
 }
+
+
+void ex215(){
+    int x1 = 0xf0, x2 = 0x0f, x3 = 0xcc, x4 = 0x55;
+    printf("x = %.2x, x << 3 = %.2x, x >> 2 = %.2x\n", x1, x1 << 3, x1 >> 2);
+    printf("x = %.2x, x << 3 = %.2x, x >> 2 = %.2x\n", x2, x2 << 3, x2 >> 2);
+    printf("x = %.2x, x << 3 = %.2x, x >> 2 = %.2x\n", x3, x3 << 3, x3 >> 2);
+    printf("x = %.2x, x << 3 = %.2x, x >> 2 = %.2x\n", x4, x4 << 3, x4 >> 2);
+}
+
+void ex220(){
+    int x1 = - 2147483648;
+    unsigned ux1 = 2147483648;
+    // fn2_ex213("x1 = -2147483648 ", x1);
+    // fn2_ex213("ux1 = 2147483648 ", ux1);
+    printf("%d == %uU is %d\n", x1, ux1, x1 == ux1);
+    int x2 = -2147483647;
+    printf("%d < %d is %d\n", x1, x2, x1 < x2);
+    unsigned ux2 = (unsigned) x1;
+    printf("%u < %d is %d\n", ux2, x2, ux2 < x2);
+    printf("%d < %d is %d\n", x2, x1, x2 < x1);
+    printf("%u < %u is %d\n", ux2, ux1-1, ux2 < ux1-1);
+}
